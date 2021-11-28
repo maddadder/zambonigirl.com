@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "leenet2": {
+    "cSharpAuth": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
