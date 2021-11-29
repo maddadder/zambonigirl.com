@@ -41,10 +41,10 @@ namespace cSharpAuth
             services.AddMicrosoftIdentityWebAppAuthentication(Configuration, "AzureAd"); 
             services.AddControllersWithViews(options =>
             {
-                var policy = new AuthorizationPolicyBuilder()
+                /*var policy = new AuthorizationPolicyBuilder()
                     .RequireAuthenticatedUser()
                     .Build();
-                options.Filters.Add(new AuthorizeFilter(policy));
+                options.Filters.Add(new AuthorizeFilter(policy));*/
             }).AddMicrosoftIdentityUI();
             services.AddHttpContextAccessor();
             services.AddSingleton<IAuthorizationMiddlewareResultHandler,
