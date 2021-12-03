@@ -17,6 +17,6 @@ docker-compose down
 
 # Deploy to microk8s
 
-docker push localhost:32000/csharpauth:1.1
+docker push localhost:32000/csharpauth:1.2
 
 microk8s kubectl apply -f microk8s.yaml

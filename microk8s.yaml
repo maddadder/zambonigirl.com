@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: csharpauth
-    release-version: "1.0"
+    release-version: "1.2"
   name: csharpauth
 spec:
   type: NodePort
@@ -23,7 +23,7 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: csharpauth
-    release-version: "1.0"
+    release-version: "1.2"
   name: csharpauth
 spec:
   replicas: 1
@@ -38,7 +38,7 @@ spec:
         io.kompose.service: csharpauth
     spec:
       containers:
-      - image: localhost:32000/csharpauth:1.1
+      - image: localhost:32000/csharpauth:1.2
         imagePullPolicy: ""
         name: csharpauth
         ports:

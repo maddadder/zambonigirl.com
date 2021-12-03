@@ -3,10 +3,10 @@ version: '2'
 services:
 
   csharpauth:
-      image: localhost:32000/csharpauth:1.1
+      image: localhost:32000/csharpauth:1.2
       build:
           context: ./
           dockerfile: ./Dockerfile
       restart: unless-stopped
       ports:
-          - "5001:80"
+          - "5001:443"
