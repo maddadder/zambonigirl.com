@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: csharpauth
+    release-version: "1.0"
+  name: csharpauth
+spec:
+  type: NodePort
+  ports:
+    - name: "80"
+      port: 80
+      nodePort: 30767
+  selector:
+    io.kompose.service: csharpauth
+status:
+  loadBalancer: {}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: csharpauth
+    release-version: "1.0"
+  name: csharpauth
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: csharpauth
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: csharpauth
+    spec:
+      containers:
+      - image: localhost:32000/csharpauth:1.0
+        imagePullPolicy: ""
+        name: csharpauth
+        ports:
+        - containerPort: 80
+        resources: {}
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes: null
+status: {}

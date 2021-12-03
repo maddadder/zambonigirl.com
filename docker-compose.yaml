@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+
+  csharpauth:
+      image: localhost:32000/csharpauth:1.0
+      build:
+          context: ./
+          dockerfile: ./Dockerfile
+      restart: unless-stopped
+      ports:
+          - "5001:80"
