@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
 using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace cSharpAuth
 {
@@ -51,6 +52,10 @@ namespace cSharpAuth
                           MyAuthorizationMiddlewareResultHandler>();
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.Configure<ForwardedHeadersOptions>(options =>
+            {
+                options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,10 +64,13 @@ namespace cSharpAuth
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseForwardedHeaders();
             }
             else
             {
                 app.UseExceptionHandler("/Error");
+                // must happen before HSTS
+                app.UseForwardedHeaders();
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
