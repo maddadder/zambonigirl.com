@@ -3,7 +3,7 @@ version: '2'
 services:
 
   csharpauth:
-      image: localhost:32000/csharpauth:1.6
+      image: localhost:32000/csharpauth:1.0.1
       build:
           context: ./
           dockerfile: ./Dockerfile

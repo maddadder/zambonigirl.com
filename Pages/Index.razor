@@ -24,17 +24,17 @@
                 <li>Blazer Boilerplate website: <a target="_blank" href="https://blazorboilerplate.leenet.link">blazorboilerplate</a></li>
             </ul>
         </div>
-        <div>Prisoner's Delemma</div>
-        <EditForm Model="@prisonersDelemma" Context="prisonersDelemmaContext"> 
+        <div>Prisoner's Dilemma</div>
+        <EditForm Model="@prisonersDilemma" Context="prisonersDilemmaContext"> 
           <PlayerComponent 
-            @bind-p1tl="@prisonersDelemma.p1tl"
-            @bind-p1tr="@prisonersDelemma.p1tr"
-            @bind-p1bl="@prisonersDelemma.p1bl"
-            @bind-p1br="@prisonersDelemma.p1br"
-            @bind-p2tl="@prisonersDelemma.p2tl"
-            @bind-p2tr="@prisonersDelemma.p2tr"
-            @bind-p2bl="@prisonersDelemma.p2bl"
-            @bind-p2br="@prisonersDelemma.p2br" />
+            @bind-p1tl="@prisonersDilemma.p1tl"
+            @bind-p1tr="@prisonersDilemma.p1tr"
+            @bind-p1bl="@prisonersDilemma.p1bl"
+            @bind-p1br="@prisonersDilemma.p1br"
+            @bind-p2tl="@prisonersDilemma.p2tl"
+            @bind-p2tr="@prisonersDilemma.p2tr"
+            @bind-p2bl="@prisonersDilemma.p2bl"
+            @bind-p2br="@prisonersDilemma.p2br" />
         </EditForm>
         <div>Hawk vs Dove</div>
         <EditForm Model="@hawkDove" Context="hawkDoveContext"> 
@@ -76,7 +76,7 @@
 </AuthorizeView>
 
 @code {
-    Game prisonersDelemma = new Game(){
+    Game prisonersDilemma = new Game(){
         p1tl = 3,
         p1tr = 0,
         p1bl = 5,
