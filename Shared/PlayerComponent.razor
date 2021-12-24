@@ -2,24 +2,24 @@
 @using XuMath
 <table class="table">
     <tr>
-        <td></td><td>P2 Defect</td><td>P2 Cooperate</td>
+        <td></td><td>P2: Defect</td><td>P2: Cooperate</td>
     </tr>
     <tr>
-        <td>P1 Defect</td>
-        <td style="border:1px solid black">
-            P1<InputNumber type="text" @bind-Value="p1tl" />, P2<InputNumber type="text" @bind-Value="@p2tl" />
+        <td>P1: Defect</td>
+        <td>
+            P1:<InputNumber class="cost" @bind-Value="p1tl" />, P2:<InputNumber class="cost" @bind-Value="@p2tl" />
         </td>
-        <td style="border:1px solid black">
-            P1<InputNumber type="text" @bind-Value="@p1tr" />, P2<InputNumber type="text" @bind-Value="@p2tr" />
+        <td>
+            P1:<InputNumber class="cost" @bind-Value="@p1tr" />, P2:<InputNumber class="cost" @bind-Value="@p2tr" />
         </td>
     </tr>
     <tr>
-        <td>P1 Cooperate</td>
-        <td style="border:1px solid black">
-            P1<InputNumber type="text" @bind-Value="@p1bl" />, P2<InputNumber type="text" @bind-Value="@p2bl" />
+        <td>P1: Cooperate</td>
+        <td>
+            P1:<InputNumber class="cost" @bind-Value="@p1bl" />, P2:<InputNumber class="cost" @bind-Value="@p2bl" />
         </td>
-        <td style="border:1px solid black">
-            P1<InputNumber type="text" @bind-Value="@p1br" />, P2<InputNumber type="text" @bind-Value="@p2br" />
+        <td>
+            P1:<InputNumber class="cost" @bind-Value="@p1br" />, P2:<InputNumber class="cost" @bind-Value="@p2br" />
         </td>
     </tr>
 </table>
@@ -164,9 +164,9 @@
         var test = NashEq.FindNashEq(P1columns, P2rows);
         foreach (var tuple in test)
         {
-            output.Add($"Nash Eq found!");
-            output.Add($"P1 Position {tuple.Item1}");
-            output.Add($"P2 Position {tuple.Item2}");
+            output.Add($"Nash equilibrium found!");
+            output.Add($"P1: Position {tuple.Item1}");
+            output.Add($"P2: Position {tuple.Item2}");
             output.Add($"Score {tuple.Item3}");
         }
         return output;
