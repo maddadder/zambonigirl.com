@@ -3,7 +3,7 @@ version: '2'
 services:
 
   zambonigirl:
-      image: 192.168.1.84:32000/zambonigirl:1.0.3
+      image: 192.168.1.84:32000/zambonigirl:1.0.4
       build:
           context: ./
           dockerfile: ./Dockerfile
