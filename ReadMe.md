@@ -17,5 +17,5 @@ docker-compose down
 
 # Deploy to microk8s
 
-docker push localhost:32000/csharpauth:1.0.2
-microk8s helm3 install csharpauth ./csharpauth
+docker push 192.168.1.84:32000/zambonigirl:1.0.2
+microk8s helm3 install zambonigirl ./zambonigirl

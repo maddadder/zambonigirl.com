@@ -1,7 +1,5 @@
 ﻿@page "/"
 @using System.Security.Claims
-@using Lib
-@using XuMath
 @using Microsoft.AspNetCore.Components.Authorization
 @using System.Diagnostics
 
@@ -15,14 +13,12 @@
         <button class="btn btn-primary" @onclick="SecureMethod">Authorized Only Button</button>
     </Authorized>
     <NotAuthorized>
-        <h2>Authentication Failure!</h2>
-        <p>You're not signed in.</p>
         <div class="jumbotron mt-3">
-            <h1>Links</h1>
+            <h1>Contact Info</h1>
             <ul>
-                <li>Summarize content with this app: <a target="_blank" href="https://summary.leenet.link">summary</a></li>
-                <li>Generate content with this app: <a target="_blank" href="https://generate.leenet.link">generate</a></li>
-                <li>Blazer Boilerplate website: <a target="_blank" href="https://blazorboilerplate.leenet.link">blazorboilerplate</a></li>
+                <li>Twitch: <a target="_blank" href="https://twitch.tv/zambonigirl">twitch.tv/zambonigirl</a></li>
+                <li>Twitter <a target="_blank" href="https://twitter.com/kareese">@@kareese</a></li>
+                <li>Linkedin: <a target="_blank" href="https://www.linkedin.com/in/kareese-arneson-b3b43b35">https://www.linkedin.com/in/kareese-arneson-b3b43b35</a></li>
             </ul>
         </div>
     </NotAuthorized>

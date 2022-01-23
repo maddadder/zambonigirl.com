@@ -1,11 +1,11 @@
-# Default values for csharpauth.
+# Default values for zambonigirl.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: localhost:32000/csharpauth
+  repository: 192.168.1.84:32000/zambonigirl
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""

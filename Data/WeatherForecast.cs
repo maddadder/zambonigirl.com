@@ -1,6 +1,6 @@
 using System;
 
-namespace cSharpAuth.Data
+namespace zambonigirl.Data
 {
     public class WeatherForecast
     {

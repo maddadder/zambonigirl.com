@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "csharpauth.fullname" . }}
+  name: {{ include "zambonigirl.fullname" . }}
   labels:
-    {{- include "csharpauth.labels" . | nindent 4 }}
+    {{- include "zambonigirl.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "csharpauth.fullname" . }}
+    name: {{ include "zambonigirl.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-namespace cSharpAuth
+namespace zambonigirl
 {
     public class MyAuthorizationMiddlewareResultHandler : IAuthorizationMiddlewareResultHandler
     {

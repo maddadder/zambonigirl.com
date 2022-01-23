@@ -3,9 +3,9 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    io.kompose.service: csharpauth
+    io.kompose.service: zambonigirl
     release-version: "1.2"
-  name: csharpauth
+  name: zambonigirl
 spec:
   type: NodePort
   ports:
@@ -13,7 +13,7 @@ spec:
       port: 80
       nodePort: 30767
   selector:
-    io.kompose.service: csharpauth
+    io.kompose.service: zambonigirl
 status:
   loadBalancer: {}
 ---
@@ -22,25 +22,25 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    io.kompose.service: csharpauth
+    io.kompose.service: zambonigirl
     release-version: "1.2"
-  name: csharpauth
+  name: zambonigirl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: csharpauth
+      io.kompose.service: zambonigirl
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        io.kompose.service: csharpauth
+        io.kompose.service: zambonigirl
     spec:
       containers:
-      - image: localhost:32000/csharpauth:1.0.2
+      - image: 192.168.1.84:32000/zambonigirl:1.0.2
         imagePullPolicy: ""
-        name: csharpauth
+        name: zambonigirl
         ports:
         - containerPort: 80
         resources: {}
