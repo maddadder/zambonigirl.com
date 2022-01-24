@@ -1,0 +1,19 @@
+@inject IJSRuntime JSRuntime
+@implements IDisposable
+@code {
+    protected override void OnInitialized()
+    {
+        
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender) 
+        {
+            await JSRuntime.InvokeAsync<object>("initializeCarousel");
+        }
+    }
+    public void Dispose()
+    {
+        
+    }
+}

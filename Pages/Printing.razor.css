@@ -1,0 +1,10 @@
+﻿.blog-post img
+{
+  max-width:640px;
+}
+.carousel{
+    max-width:650px;
+}
+.blog-post{
+    margin-top:54px;
+}
