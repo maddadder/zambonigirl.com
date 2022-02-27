@@ -17,5 +17,8 @@ docker-compose down
 
 # Deploy to microk8s
 
-docker push 192.168.1.84:32000/zambonigirl:1.0.10
+docker push 192.168.1.151:32000/zambonigirl:1.0.11
 microk8s helm3 install zambonigirl ./zambonigirl
+
+# daffy
+helm install zambonigirl ./zambonigirl --namespace websites

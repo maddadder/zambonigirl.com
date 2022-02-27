@@ -9,7 +9,7 @@
 <AuthorizeView>
     <Authorized>
         <h2>Hello, @context.User.Identity.Name!</h2>
-        <p>You can only see this content if you're authorized.</p>
+        <p>You can only see this content if you're authorized to view this.</p>
         <button class="btn btn-primary" @onclick="SecureMethod">Authorized Only Button</button>
     </Authorized>
     <NotAuthorized>

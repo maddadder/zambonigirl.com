@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: 192.168.1.84:32000/zambonigirl
+  repository: 192.168.1.151:32000/zambonigirl
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
